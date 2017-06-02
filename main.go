@@ -466,6 +466,10 @@ func main() {
 			os.Stdout.Write([]byte{'\n', '\n'})
 		}
 	}
+
+	if response.StatusCode >= 400 {
+		os.Exit(response.StatusCode - 400)
+	}
 }
 
 func printJSON(depth int, val interface{}, isKey bool) {
