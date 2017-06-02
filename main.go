@@ -468,11 +468,7 @@ func main() {
 	}
 
 	if response.StatusCode >= 400 {
-<<<<<<< HEAD
-		os.Exit(response.StatusCode - 400)
-=======
 		os.Exit(response.StatusCode - 399)
->>>>>>> tehmaze/exit-code
 	}
 }
 
